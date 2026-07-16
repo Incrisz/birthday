@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d060b" />
+
+  <title>Happy Birthday, Precious Ejikeme 💗</title>
+  <meta
+    name="description"
+    content="A special interactive birthday surprise for Precious Ejikeme — July 17th."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <!-- Optional music:
+       Add a file named song.mp3 inside the assets folder. -->
+  <audio id="birthdayMusic" loop preload="auto">
+    <source src="assets/song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Opening screen -->
+  <section class="intro-screen" id="introScreen">
+    <div class="intro-glow"></div>
+
+    <div class="intro-content">
+      <p class="eyebrow">JULY 17TH</p>
+
+      <div class="heart-shell" aria-hidden="true">
+        <span>♥</span>
+      </div>
+
+      <h1>Someone very special<br />is celebrating today…</h1>
+
+      <p class="intro-copy">
+        A tiny world was made with love, memories, magic,
+        and just enough black to make it perfect.
+      </p>
+
+      <button class="primary-button" id="openSurprise">
+        <span>Open Your Surprise</span>
+        <span aria-hidden="true">✨</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Main birthday experience -->
+  <main id="mainContent" class="main-content hidden">
+    <header class="hero section">
+      <nav class="topbar">
+        <a href="#home" class="brand">P<span>♥</span>E</a>
+
+        <button
+          id="musicButton"
+          class="music-button"
+          type="button"
+          aria-label="Play birthday music"
+        >
+          <span class="music-icon">♫</span>
+          <span id="musicLabel">Play Music</span>
+        </button>
+      </nav>
+
+      <div class="floating-shape shape-one"></div>
+      <div class="floating-shape shape-two"></div>
+      <div class="floating-shape shape-three"></div>
+
+      <div class="hero-content" id="home">
+        <p class="eyebrow">A BIRTHDAY SURPRISE FOR</p>
+
+        <h2 class="hero-name">
+          Precious
+          <span>Ejikeme</span>
+        </h2>
+
+        <p class="hero-date">JULY 17TH</p>
+
+        <p class="hero-message">
+          Today is all about celebrating your beautiful heart,
+          your unforgettable smile, and the amazing person you are.
+        </p>
+
+        <a href="#memories" class="secondary-button">
+          Enter Precious’ World
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div class="scroll-note">
+        <span></span>
+        Scroll for more
+      </div>
+    </header>
+
+    <!-- Photos -->
+    <section class="section memories-section" id="memories">
+      <div class="section-heading">
+        <p class="eyebrow">A FEW BEAUTIFUL MOMENTS</p>
+        <h3>Precious in Pictures</h3>
+        <p>
+          Every picture holds a little piece of joy, laughter,
+          beauty, and main-character energy.
+        </p>
+      </div>
+
+      <div class="photo-grid">
+        <figure class="polaroid tilt-left reveal">
+          <img src="assets/precious-1.jpg" alt="A beautiful memory of Precious" />
+          <figcaption>That smile can brighten any room 💗</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-right reveal">
+          <img src="assets/precious-2.jpg" alt="A favourite photo of Precious" />
+          <figcaption>Certified fine girl moment ✨</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-left reveal">
+          <img src="assets/precious-3.jpg" alt="Precious looking happy" />
+          <figcaption>Soft, beautiful, and unforgettable 🌸</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-right reveal">
+          <img src="assets/precious-4.jpg" alt="A special moment with Precious" />
+          <figcaption>Main-character energy, always 🖤</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-left reveal">
+          <img src="assets/precious-5.jpg" alt="Precious enjoying a lovely moment" />
+          <figcaption>A whole bundle of joy and laughter 🎀</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-right reveal">
+          <img src="assets/precious-6.jpg" alt="Another beautiful memory of Precious" />
+          <figcaption>One of my favourite friend, forever 💕</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Clickable reasons -->
+    <section class="section reasons-section">
+      <div class="section-heading">
+        <p class="eyebrow">TAP EACH HEART</p>
+        <h3>Reasons You Are Amazing</h3>
+        <p>
+          There are too many reasons to fit on one page,
+          but here are a few you should never forget.
+        </p>
+      </div>
+
+      <div class="reason-grid">
+        <button class="reason-card" type="button">
+          <span class="reason-icon">♥</span>
+          <span class="reason-title">Tap to reveal</span>
+          <span class="reason-text">
+            You have a genuinely beautiful heart, and the people around you are
+            lucky to experience your kindness.
+          </span>
+        </button>
+
+        <button class="reason-card" type="button">
+          <span class="reason-icon">♥</span>
+          <span class="reason-title">Tap to reveal</span>
+          <span class="reason-text">
+            Your smile carries warmth, happiness, and a kind of light that is
+            completely your own.
+          </span>
+        </button>
+
+        <button class="reason-card" type="button">
+          <span class="reason-icon">♥</span>
+          <span class="reason-title">Tap to reveal</span>
+          <span class="reason-text">
+            You make friendship feel easy, safe, memorable, and worth being
+            grateful for.
+          </span>
+        </button>
+
+        <button class="reason-card" type="button">
+          <span class="reason-icon">♥</span>
+          <span class="reason-title">Tap to reveal</span>
+          <span class="reason-text">
+            You deserve good things, answered prayers, peaceful days, and a life
+            filled with beautiful surprises.
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Secret letter -->
+    <section class="section letter-section">
+      <div class="letter-wrapper reveal">
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div>
+          <div class="letter-preview">
+            <span>For Precious</span>
+            <small>Tap to open</small>
+          </div>
+          <div class="envelope-flap"></div>
+        </div>
+
+        <div class="letter-content" id="letterContent">
+          <p class="letter-date">JULY 17TH</p>
+
+          <h3>Dear Precious,</h3>
+
+          <p>
+            On your birthday, I just want you to know how grateful I am to have
+            you as my friend. You are kind, beautiful, thoughtful, funny,
+            and truly special.
+          </p>
+
+          <p>
+            Thank you for the conversations, the laughter, the memories, and all
+            the little moments that make our friendship meaningful. You deserve
+            a new year filled with happiness, peace, answered prayers, genuine
+            love, success, and opportunities that make you proud.
+          </p>
+
+          <p>
+            Never forget how valuable you are, how much light you carry, and how
+            many beautiful things are still waiting for you.
+          </p>
+
+          <p class="letter-signoff">
+            Happy Birthday, Precious. 💗<br />
+            <span>With lots of love</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final celebration -->
+    <section class="section finale-section">
+      <div class="finale-card reveal">
+        <p class="eyebrow">ONE FINAL THING</p>
+
+        <h3>Make a Birthday Wish</h3>
+
+        <p>
+          Close your eyes, make your wish, and tap the button when you are ready.
+        </p>
+
+        <button id="wishButton" class="wish-button" type="button">
+          I Made My Wish ✨
+        </button>
+
+        <div class="final-message" id="finalMessage">
+          <span class="final-heart">♥</span>
+
+          <h4>Happy Birthday, Precious Ejikeme!</h4>
+
+          <p>
+            May July 17th always remind the world that someone truly special
+            was born.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Made with <span>♥</span> especially for Precious Ejikeme
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

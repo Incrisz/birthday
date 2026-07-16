@@ -16,9 +16,29 @@ const finalMessage = document.getElementById("finalMessage");
 const canvas = document.getElementById("confettiCanvas");
 const context = canvas.getContext("2d");
 
-let musicIsPlaying = false;
 let confettiPieces = [];
 let confettiAnimationId = null;
+
+function updateMusicButton(isPlaying) {
+  musicButton.classList.toggle("playing", isPlaying);
+  musicLabel.textContent = isPlaying ? "Pause Music" : "Play Music";
+  musicButton.setAttribute(
+    "aria-label",
+    isPlaying ? "Pause birthday music" : "Play birthday music"
+  );
+}
+
+async function playMusic() {
+  try {
+    await music.play();
+    updateMusicButton(true);
+    return true;
+  } catch (error) {
+    // Most browsers block audible autoplay until the visitor interacts.
+    console.info("Waiting for a user interaction to start music.", error);
+    return false;
+  }
+}
 
 function resizeCanvas() {
   const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
@@ -34,7 +54,13 @@ function resizeCanvas() {
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 
+window.addEventListener("load", playMusic);
+
 openSurpriseButton.addEventListener("click", () => {
+  if (music.paused) {
+    playMusic();
+  }
+
   introScreen.classList.add("leave");
 
   setTimeout(() => {
@@ -46,26 +72,13 @@ openSurpriseButton.addEventListener("click", () => {
 });
 
 musicButton.addEventListener("click", async () => {
-  try {
-    if (musicIsPlaying) {
-      music.pause();
-      musicButton.classList.remove("playing");
-      musicLabel.textContent = "Play Music";
-      musicIsPlaying = false;
-      return;
-    }
-
-    await music.play();
-    musicButton.classList.add("playing");
-    musicLabel.textContent = "Pause Music";
-    musicIsPlaying = true;
-  } catch (error) {
-    musicLabel.textContent = "Add song.mp3";
-    console.warn(
-      "Music could not play. Add assets/song.mp3, then try again.",
-      error
-    );
+  if (!music.paused) {
+    music.pause();
+    updateMusicButton(false);
+    return;
   }
+
+  await playMusic();
 });
 
 reasonCards.forEach((card) => {

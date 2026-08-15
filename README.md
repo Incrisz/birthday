@@ -1,11 +1,11 @@
-# Precious Ejikeme Birthday Website
+# Emmanuella Pelumi Birthday Website
 
 A mobile-friendly interactive birthday surprise in pink and black.
 
 ## Included features
 
 - Animated opening screen
-- Precious Ejikeme's name and July 17th
+- Emmanuella Pelumi's name and July 17th
 - Responsive photo gallery
 - Click-to-reveal compliments
 - Interactive birthday letter
@@ -13,7 +13,7 @@ A mobile-friendly interactive birthday surprise in pink and black.
 - Birthday wish button with confetti
 - No framework or installation required
 
-## Add Precious' real pictures
+## Add Emmanuella's real pictures
 
 Open the `assets` folder and replace:
 
@@ -58,7 +58,7 @@ The compliment cards are under:
 
 The birthday letter is under:
 
-`Dear Precious`
+`Dear Emmanuella`
 
 ## Put it online for free
 

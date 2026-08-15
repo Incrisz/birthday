@@ -5,7 +5,7 @@ A mobile-friendly interactive birthday surprise in pink and black.
 ## Included features
 
 - Animated opening screen
-- Emmanuella Pelumi's name and July 17th
+- Emmanuella Pelumi's name and August 15th
 - Responsive photo gallery
 - Click-to-reveal compliments
 - Interactive birthday letter

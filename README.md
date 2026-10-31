@@ -1,11 +1,11 @@
-# Emmanuella Pelumi Birthday Website
+# Princess ZanaBirthday Website
 
 A mobile-friendly interactive birthday surprise in pink and black.
 
 ## Included features
 
 - Animated opening screen
-- Emmanuella Pelumi's name and August 15th
+- Princess Zana's name and OCTOBER 1ST
 - Responsive photo gallery
 - Click-to-reveal compliments
 - Interactive birthday letter
